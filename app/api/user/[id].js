@@ -7,7 +7,7 @@ export default function Details(){
     const params = useLocalSearchParams();
 
     return(
-        <SafeAreaView style = {{flex:1}}>
+        <SafeAreaView style = {{flex:1, backgroundColor: COLORS.bg}}>
             <Stack.Screen
                 options={{
                     headerStyle: {backgroundColor: COLORS.bg},
@@ -16,11 +16,11 @@ export default function Details(){
                     headerTitle: "jouzu",
                     headerTintColor: COLORS.white,
                     headerTitleAlign: 'center',
-                    }} />
+                    }}/>
             <WebView 
-                source={{ uri: `https://osu.ppy.sh/home/news/${params.slug}` }}
+                source={{ uri: `https://osu.ppy.sh/users/${params.id}` }}
                 style={{ backgroundColor: COLORS.bg }}    
-                />      
+                />    
         </SafeAreaView>
     )
 }

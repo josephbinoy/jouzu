@@ -4,22 +4,17 @@ import { useRouter } from 'expo-router'
 import styles from './welcome.style'
 import { SIZES, icons } from '../../../constants'
 
-export default function Welcome(){
+export default function Welcome({tabs, activeTab, setActiveTab}){
   const router = useRouter();
-  const pages= ['News', 'Beatmaps', 'Community', 'Events']
-  const [pageType, setPageType] = useState('News');
+
   function handleChange(e){
     console.log(e.target.value);
   }
 
-  function handlePress(){
+  function handleSearchPress(){
     console.log('Search button pressed');
   }
 
-  function handleSearchPress(item){
-    setPageType(item);
-    router.push(`/${item}`)
-  }
   return (
     <View>
       <View>
@@ -34,7 +29,7 @@ export default function Welcome(){
             onChange={handleChange}
             placeholder='Search osu! stuff' />
         </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={handlePress}>
+        <TouchableOpacity style={styles.searchBtn} onPress={()=>{handleSearchPress('ere')}}>
           <Image 
             source={icons.search} 
             style={styles.searchBtnImage}
@@ -45,12 +40,12 @@ export default function Welcome(){
 
       <View style={styles.tabsContainer}>
         <FlatList 
-          data={pages}
+          data={tabs}
           renderItem={({item}) => (
             <TouchableOpacity
-              style={styles.tab(pageType, item)}
-              onPress={()=>handleSearchPress(item)}>
-              <Text style={styles.tabText(pageType, item)}>{item}</Text>
+              style={styles.tab(activeTab, item)}
+              onPress={()=>setActiveTab(item)}>
+              <Text style={styles.tabText(activeTab, item)}>{item}</Text>
             </TouchableOpacity>
           )}
             keyExtractor={(item) => item}

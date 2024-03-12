@@ -56,16 +56,16 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: SIZES.medium,
   },
-  tab: (pageType, item) => ({
+  tab: (activeTab, tab) => ({
     paddingVertical: SIZES.small / 2,
     paddingHorizontal: SIZES.small,
     borderRadius: SIZES.medium,
     borderWidth: 1,
-    borderColor:  pageType == item ? COLORS.primary : COLORS.gray2,
+    borderColor:  activeTab == tab ? COLORS.primary : COLORS.gray2,
   }),
-  tabText: (pageType, item) => ({
+  tabText: (activeTab, tab) => ({
     fontFamily: FONT.medium,
-    color: pageType == item ? COLORS.primary : COLORS.gray2,
+    color: activeTab == tab ? COLORS.primary : COLORS.gray2,
   }),
 });
 
