@@ -3,6 +3,8 @@ import { Image } from 'react-native';
 import { COLORS, icons, images } from '../../constants';
 import { StyleSheet } from "react-native";
 import { ScreenHeaderBtn } from '../../components';
+import { useContext } from 'react';
+import { AuthContext } from '../api/auth/AuthContext';
 
 const tabStyle = StyleSheet.create({
     tab: (color) => ({
@@ -13,6 +15,7 @@ const tabStyle = StyleSheet.create({
 })
 
 export default function TabLayout() {
+  const { user } = useContext(AuthContext);
   return (
     <Tabs screenOptions={{ 
         tabBarActiveTintColor: COLORS.white,
@@ -32,7 +35,7 @@ export default function TabLayout() {
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
           headerRight: () => (
-              <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
+              <ScreenHeaderBtn iconUrl={{uri: user.avatar_url}} dimension='100%' />
           ),
           headerTitle: "jouzu",
           headerTintColor: COLORS.white,
@@ -44,6 +47,18 @@ export default function TabLayout() {
         name="beatmaps"
         options={{
           title: 'Beatmaps',
+          tabBarIcon: ({color}) => {return <Image source={icons.beatmaps} style={tabStyle.tab(color)}/>},
+          headerShadowVisible: false,
+          headerStyle: {backgroundColor: COLORS.bg},
+          headerTitle: "jouzu",
+          headerTintColor: COLORS.white,
+          headerTitleAlign: 'center',
+        }}
+      />
+      <Tabs.Screen
+        name="me"
+        options={{
+          title: 'Me',
           tabBarIcon: ({color}) => {return <Image source={icons.beatmaps} style={tabStyle.tab(color)}/>},
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},

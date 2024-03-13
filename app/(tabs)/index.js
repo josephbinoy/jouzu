@@ -1,11 +1,9 @@
 import {View, ScrollView, SafeAreaView } from 'react-native';
-import { Stack, useRouter } from 'expo-router';
 import { useState } from 'react';
-import { COLORS, SIZES, images } from '../../constants';
-import { News, ScreenHeaderBtn, Welcome, Rankings } from '../../components';
+import { COLORS, SIZES} from '../../constants';
+import { News, Welcome, Rankings } from '../../components';
 
 export default function Home() {
-    const router = useRouter();
     const tabs= ['News', 'Rankings', 'Community', 'Events']
     const[activeTab, setActiveTab] = useState(tabs[0]);
 

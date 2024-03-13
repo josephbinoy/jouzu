@@ -1,35 +1,35 @@
-import {useState} from 'react'
 import { View, Text, TextInput, Image, FlatList, TouchableOpacity } from 'react-native'
+import { useState } from 'react'
 import { useRouter } from 'expo-router'
 import styles from './welcome.style'
 import { SIZES, icons } from '../../../constants'
+import { useContext } from 'react'
+import { AuthContext } from '../../../app/api/auth/AuthContext'
 
 export default function Welcome({tabs, activeTab, setActiveTab}){
+  const { loggedIn, user } = useContext(AuthContext);
+  const [query, setQuery] = useState('');
   const router = useRouter();
 
-  function handleChange(e){
-    console.log(e.target.value);
-  }
-
   function handleSearchPress(){
-    console.log('Search button pressed');
+    router.push(`/api/search/${query}`)
   }
 
   return (
     <View>
       <View>
-        <Text style={styles.title}> Welcome lOmaine</Text>
+        <Text style={styles.title}>Welcome {user.username}</Text>
       </View>
 
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput 
             style={styles.searchInput} 
-            value="" 
-            onChange={handleChange}
+            value={query} 
+            onChangeText={(text)=>{setQuery(text)}}
             placeholder='Search osu! stuff' />
         </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={()=>{handleSearchPress('ere')}}>
+        <TouchableOpacity style={styles.searchBtn} onPress={handleSearchPress}>
           <Image 
             source={icons.search} 
             style={styles.searchBtnImage}

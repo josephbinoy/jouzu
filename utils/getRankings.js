@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { API_TOKEN_NEW } from "@env";
+import { api_tkn } from "@env";
 
 export default function getRankings() {
     const [rankings, setRankings] = useState([]);
@@ -9,7 +9,7 @@ export default function getRankings() {
 
     const config={
         headers: {
-            'Authorization': `Bearer ${API_TOKEN_NEW}`,
+            'Authorization': `Bearer ${api_tkn}`,
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         }
