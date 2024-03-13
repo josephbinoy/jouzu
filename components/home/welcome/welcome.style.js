@@ -6,11 +6,6 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
   },
-  content: {
-    fontFamily: FONT.regular,
-    fontSize: SIZES.large,
-    color: COLORS.secondary,
-  },
   title: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
@@ -48,8 +43,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   searchBtnImage: {
-    width: "50%",
-    height: "50%",
+    width: "55%",
+    height: "55%",
     tintColor: COLORS.white,
   },
   tabsContainer: {

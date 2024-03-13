@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: SIZES.small,
-    backgroundColor: "#302e38",
+    backgroundColor: COLORS.secondary,
     ...SHADOWS.medium,
   },
   logoImage: {

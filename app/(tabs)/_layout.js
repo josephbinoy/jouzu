@@ -1,17 +1,17 @@
 import { Tabs } from 'expo-router';
-import { Image } from 'react-native';
-import { COLORS, icons, images } from '../../constants';
+import { Image, Text } from 'react-native';
+import { COLORS, SIZES, icons} from '../../constants';
 import { StyleSheet } from "react-native";
 import { ScreenHeaderBtn } from '../../components';
 import { useContext } from 'react';
 import { AuthContext } from '../api/auth/AuthContext';
 
 const tabStyle = StyleSheet.create({
-    tab: (color) => ({
+    tabIcon: (color) => ({
         tintColor: color,
         height: 25,
         width: 25,
-    }),
+    })
 })
 
 export default function TabLayout() {
@@ -31,7 +31,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({color}) => {return <Image source={icons.home} style={tabStyle.tab(color)}/>},
+          tabBarIcon: ({color}) => (<Image source={icons.home} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
           headerRight: () => (
@@ -47,7 +47,7 @@ export default function TabLayout() {
         name="beatmaps"
         options={{
           title: 'Beatmaps',
-          tabBarIcon: ({color}) => {return <Image source={icons.beatmaps} style={tabStyle.tab(color)}/>},
+          tabBarIcon: ({color}) => (<Image source={icons.beatmaps} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
           headerTitle: "jouzu",
@@ -59,7 +59,7 @@ export default function TabLayout() {
         name="me"
         options={{
           title: 'Me',
-          tabBarIcon: ({color}) => {return <Image source={icons.beatmaps} style={tabStyle.tab(color)}/>},
+          tabBarIcon: ({color}) => (<Image source={icons.me} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
           headerTitle: "jouzu",
