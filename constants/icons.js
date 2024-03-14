@@ -1,11 +1,11 @@
 import home from "../assets/icons/home.png";
-import search from "../assets/icons/search.png";
 import beatmaps from "../assets/icons/beatmaps.png";
 import me from "../assets/icons/me.png";
+import heart from "../assets/icons/heart.png";
 
 export default {
-  search,
   home,
   beatmaps,
   me,
+  heart
 };

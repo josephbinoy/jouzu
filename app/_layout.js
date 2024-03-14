@@ -46,7 +46,6 @@ function AuthHandler(){
     useEffect(() => {
         const handleAuth = async () => {
             if (url && url!='exp://192.168.1.11:8081') {
-                console.log(url);
                 console.log("AuthHandler if block called");
                 const { queryParams } = Linking.parse(url);
                 if (queryParams && queryParams.code) {

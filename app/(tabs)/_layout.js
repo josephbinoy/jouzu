@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
-import { Image, Text } from 'react-native';
-import { COLORS, SIZES, icons} from '../../constants';
+import { Image } from 'react-native';
+import { COLORS, FONT, icons} from '../../constants';
 import { StyleSheet } from "react-native";
 import { ScreenHeaderBtn } from '../../components';
 import { useContext } from 'react';
@@ -30,41 +30,42 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'home',
           tabBarIcon: ({color}) => (<Image source={icons.home} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
           headerRight: () => (
-              <ScreenHeaderBtn iconUrl={{uri: user.avatar_url}} dimension='100%' />
+              <ScreenHeaderBtn iconUrl={{uri: user.avatar_url}} />
           ),
           headerTitle: "jouzu",
           headerTintColor: COLORS.white,
-          headerTitleAlign: 'center'
+          headerTitleAlign: 'left'
         }}
         
       />
       <Tabs.Screen
         name="beatmaps"
         options={{
-          title: 'Beatmaps',
+          title: 'beatmaps',
           tabBarIcon: ({color}) => (<Image source={icons.beatmaps} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
-          headerTitle: "jouzu",
+          headerTitle: "beatmaps listing",
           headerTintColor: COLORS.white,
-          headerTitleAlign: 'center',
+          headerTitleAlign: 'left',
         }}
       />
       <Tabs.Screen
         name="me"
         options={{
-          title: 'Me',
+          title: 'me',
           tabBarIcon: ({color}) => (<Image source={icons.me} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
-          headerStyle: {backgroundColor: COLORS.bg},
-          headerTitle: "jouzu",
+          headerStyle: {backgroundColor: COLORS.bg,},
+          headerTitle: "my profile",
+          headerTitleStyle: {fontFamily: FONT.medium},
           headerTintColor: COLORS.white,
-          headerTitleAlign: 'center',
+          headerTitleAlign: 'left',
         }}
       />
     </Tabs>

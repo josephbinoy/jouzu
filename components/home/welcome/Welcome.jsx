@@ -2,9 +2,10 @@ import { View, Text, TextInput, Image, FlatList, TouchableOpacity } from 'react-
 import { useState } from 'react'
 import { useRouter } from 'expo-router'
 import styles from './welcome.style'
-import { SIZES, icons } from '../../../constants'
+import { SIZES, COLORS} from '../../../constants'
 import { useContext } from 'react'
 import { AuthContext } from '../../../app/api/auth/AuthContext'
+import FontAwesome from '@expo/vector-icons/FontAwesome5'
 
 export default function Welcome({tabs, activeTab, setActiveTab}){
   const { loggedIn, user } = useContext(AuthContext);
@@ -30,11 +31,7 @@ export default function Welcome({tabs, activeTab, setActiveTab}){
             placeholder='Search osu! stuff' />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={handleSearchPress}>
-          <Image 
-            source={icons.search} 
-            style={styles.searchBtnImage}
-            resizeMode='contain'
-             />
+          <FontAwesome name='search' size={20} color={COLORS.lightWhite} />
         </TouchableOpacity>
       </View>
 

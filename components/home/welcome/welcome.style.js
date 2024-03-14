@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
   searchWrapper: {
     flex: 1,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.lightWhite,
     marginRight: SIZES.small,
     justifyContent: "center",
     alignItems: "center",
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   searchBtnImage: {
     width: "55%",
     height: "55%",
-    tintColor: COLORS.white,
+    tintColor: COLORS.lightWhite,
   },
   tabsContainer: {
     width: "100%",

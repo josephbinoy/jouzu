@@ -5,6 +5,9 @@ import { useRouter } from 'expo-router';
 import { StyleSheet } from 'react-native';
 import { AuthContext } from '../api/auth/AuthContext';
 import getAndStoreUser from '../../utils/getAndStoreUser';
+import ProfileCard from '../../components/common/cards/me/ProfileCard';
+import StatCard from '../../components/common/cards/me/StatCard';
+import QuickStatsCard from '../../components/common/cards/me/QuickStatsCard';
 
 const loginStyle = StyleSheet.create({
     button: {
@@ -33,14 +36,9 @@ export default function Home() {
   return(
     <SafeAreaView style = {{flex:1, backgroundColor: COLORS.bg}}>
         {loggedIn?<ScrollView refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.username}</Text>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.id}</Text>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.occupation}</Text>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.pp}</Text>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.global_rank}</Text>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.interests}</Text>
-            <Text style={{fontFamily: FONT.medium, fontSize: SIZES.medium, color: COLORS.white}}>{user.miss_count}</Text>
-
+            <ProfileCard user={user} />
+            <StatCard user = {user} />
+            <QuickStatsCard user = {user} />
             </ScrollView> : <View style = {{flex:1, justifyContent: 'center', alignItems: 'center'}}>
             <Text style={{fontFamily: FONT.bold, fontSize: SIZES.xLarge, color: COLORS.white}}>Not logged in</Text>
             <TouchableOpacity onPress={()=> {router.push('/api/login/login')}} style={loginStyle.button}>
