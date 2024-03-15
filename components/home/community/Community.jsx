@@ -7,6 +7,7 @@ import BgCard from '../../common/cards/community/BgCard'
 import getSeasonalBg from '../../../utils/getSeasonalBg'
 import FontAwesome from '@expo/vector-icons/FontAwesome6'
 import * as ScreenOrientation from 'expo-screen-orientation';
+import { StatusBar } from 'expo-status-bar'
 
 export default function News() {
   const router = useRouter();
@@ -15,7 +16,6 @@ export default function News() {
   const [url, setUrl] = useState('');
 
   function handleBgPress(url) {
-    console.log(url);
     setModalVisible(true);
     setUrl(url);
     ScreenOrientation.unlockAsync();
@@ -37,11 +37,12 @@ export default function News() {
         transparent={true}
         onRequestClose={closeModal}
         >
-        <SafeAreaView style={{flex: 1, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center'}}>
+        <StatusBar backgroundColor='black'/>
+        <View style={{flex: 1, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center'}}>
             <Image
             source={{uri: url}}
             style={{width: '100%', height: '100%'}}
-            resizeMode='center'
+            resizeMode='contain'
             />
             <TouchableOpacity
                 style={{position: 'absolute', top: 20, right: 20}}
@@ -49,7 +50,7 @@ export default function News() {
             >
                 <FontAwesome name="x" color={COLORS.white} size={20}/>
             </TouchableOpacity>
-        </SafeAreaView>
+        </View>
       </Modal>}
     {!modalVisible&&<View style={styles.container}>
       <View style={styles.header}>

@@ -1,10 +1,11 @@
 import { Tabs } from 'expo-router';
-import { Image } from 'react-native';
+import { Image} from 'react-native';
 import { COLORS, FONT, icons} from '../../constants';
 import { StyleSheet } from "react-native";
 import { ScreenHeaderBtn } from '../../components';
 import { useContext } from 'react';
 import { AuthContext } from '../api/auth/AuthContext';
+import { useRouter } from 'expo-router';
 
 const tabStyle = StyleSheet.create({
     tabIcon: (color) => ({
@@ -15,6 +16,7 @@ const tabStyle = StyleSheet.create({
 })
 
 export default function TabLayout() {
+  const router = useRouter();
   const { user } = useContext(AuthContext);
   return (
     <Tabs screenOptions={{ 
@@ -53,6 +55,7 @@ export default function TabLayout() {
           headerTitle: "beatmaps listing",
           headerTintColor: COLORS.white,
           headerTitleAlign: 'left',
+          unmountOnBlur: true
         }}
       />
       <Tabs.Screen

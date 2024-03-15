@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        margin: 5,
+        margin: 10,
     },
     inputBox: {
         backgroundColor: COLORS.dark,

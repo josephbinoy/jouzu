@@ -10,6 +10,7 @@ import getAndStoreUser  from '../utils/getAndStoreUser';
 import getGuestToken from '../utils/getGuestToken';
 import { getAndStoreToken } from '../utils/getAndStoreToken';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as NavigationBar from 'expo-navigation-bar';
   
 SplashScreen.preventAutoHideAsync();
   
@@ -23,6 +24,7 @@ export default function Layout() {
     useEffect(() => {
         if (fontsLoaded || fontError) {
             SplashScreen.hideAsync();
+            NavigationBar.setVisibilityAsync("hidden");
         }
     }, [fontsLoaded, fontError]);
 
