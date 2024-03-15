@@ -7,6 +7,7 @@ import * as Linking from 'expo-linking';
 import { AuthProvider } from './api/auth/AuthProvider';
 import { AuthContext } from './api/auth/AuthContext';
 import getAndStoreUser  from '../utils/getAndStoreUser';
+import getGuestToken from '../utils/getGuestToken';
 import { getAndStoreToken } from '../utils/getAndStoreToken';
 import AsyncStorage from '@react-native-async-storage/async-storage';
   
@@ -76,8 +77,22 @@ function AuthHandler(){
                 if(chatPermission=='true'){
                     setCanChat(true);
                 }
+                await refreshExpiredGuestToken();
             }
         }
         handleAuth();
     }, [url]);
+}
+
+async function refreshExpiredGuestToken(){
+    const jsonValue = await AsyncStorage.getItem('GUEST_TOKEN');
+    let GUEST_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
+    if(GUEST_TOKEN){
+        if (Date.now() > GUEST_TOKEN.expires_at) {
+            await getGuestToken();
+        }
+    }
+    else{
+        await getGuestToken();
+    }
 }

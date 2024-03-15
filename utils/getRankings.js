@@ -1,23 +1,36 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { api_tkn } from "@env";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import getGuestToken from "./getGuestToken";
 
 export default function getRankings() {
     const [rankings, setRankings] = useState([]);
     const [isLoading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const config={
-        headers: {
-            'Authorization': `Bearer ${api_tkn}`,
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        }
-    }
-
     const fetchRanks = async () => {
         try {
+            const jsonValue = await AsyncStorage.getItem('GUEST_TOKEN');
+            let GUEST_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
+        
+            if (GUEST_TOKEN === null) {
+                return;
+            }
+        
+            if (Date.now() > GUEST_TOKEN.expires_at) {
+                await getGuestToken();
+                const updatedJsonValue = await AsyncStorage.getItem('GUEST_TOKEN');
+                GUEST_TOKEN = (updatedJsonValue != null) ? JSON.parse(updatedJsonValue) : null;
+            }
+            const config={
+                headers: {
+                    'Authorization': `Bearer ${GUEST_TOKEN.access_token}`,
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            }
             setLoading(true);
+            console.log('fetching ranks');
             const response = await axios.get('https://osu.ppy.sh/api/v2/rankings/osu/performance', config);
             setRankings(response.data.ranking);
             setLoading(false);

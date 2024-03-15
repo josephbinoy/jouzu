@@ -38,12 +38,9 @@ export default async function getFriends() {
                 cover: friend.cover,
                 global_rank: friend.statistics.global_rank
             }
-            if (friend.is_online) {
-                friends.unshift(friendData);
-            } else {
-                friends.push(friendData);
-            }
+            friends.push(friendData);
         }
+        friends.sort((a, b) => new Date(b.last_online) - new Date(a.last_online));
         return friends;
 
     } catch (e) {
