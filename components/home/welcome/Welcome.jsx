@@ -8,12 +8,13 @@ import { AuthContext } from '../../../app/api/auth/AuthContext'
 import FontAwesome from '@expo/vector-icons/FontAwesome5'
 
 export default function Welcome({tabs, activeTab, setActiveTab}){
-  const { loggedIn, user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [query, setQuery] = useState('');
   const router = useRouter();
 
   function handleSearchPress(){
     router.push(`/api/search/${query}`)
+    setQuery('');
   }
 
   return (
@@ -28,7 +29,9 @@ export default function Welcome({tabs, activeTab, setActiveTab}){
             style={styles.searchInput} 
             value={query} 
             onChangeText={(text)=>{setQuery(text)}}
-            placeholder='Search osu! stuff' />
+            placeholder='Search osu! stuff'
+            selectionColor={COLORS.primary} 
+            />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={handleSearchPress}>
           <FontAwesome name='search' size={20} color={COLORS.lightWhite} />

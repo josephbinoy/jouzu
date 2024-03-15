@@ -41,18 +41,27 @@ export default function Layout() {
     )}
 
 function AuthHandler(){
-    const { setLoggedIn, setUser } = useContext(AuthContext);
+    const { setLoggedIn, setUser, loggedIn, setCanChat } = useContext(AuthContext);
     const url = Linking.useURL();
     useEffect(() => {
         const handleAuth = async () => {
-            if (url && url!='exp://192.168.1.11:8081') {
+            if (url && url!='exp://192.168.1.6:8081') {
                 console.log("AuthHandler if block called");
                 const { queryParams } = Linking.parse(url);
                 if (queryParams && queryParams.code) {
-                    console.log(queryParams.code)
-                    await getAndStoreToken(queryParams.code);
-                    if(await getAndStoreUser(setUser)){
-                        setLoggedIn(true);
+                    if (loggedIn){
+                        console.log('setting chat permission- '+queryParams.code)
+                        await getAndStoreToken(queryParams.code);
+                        await AsyncStorage.setItem('CHAT_PERMSSION', 'true');
+                        setCanChat(true);
+                    }
+                    else {
+                        console.log(queryParams.code)
+                        await getAndStoreToken(queryParams.code);
+                        const success = await getAndStoreUser(setUser);
+                        if (success){
+                            setLoggedIn(true);
+                        }
                     }
                 }
             }
@@ -62,7 +71,11 @@ function AuthHandler(){
                 if(jsonValue){
                     setUser(JSON.parse(jsonValue));
                     setLoggedIn(true);
-                }   
+                }
+                const chatPermission = await AsyncStorage.getItem('CHAT_PERMSSION');
+                if(chatPermission=='true'){
+                    setCanChat(true);
+                }
             }
         }
         handleAuth();

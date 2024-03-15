@@ -8,7 +8,7 @@ import { COLORS } from "../../../constants";
 export default function Details(){
     const params = useLocalSearchParams();
     const [isLoading, setLoading] = useState(false);
-
+    console.log("user page called")
     return(
         <SafeAreaView style = {{flex:1, backgroundColor: COLORS.bg}}>
             <Stack.Screen

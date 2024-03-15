@@ -8,7 +8,7 @@ export default async function getAndStoreUser(setUser) {
         const jsonValue = await AsyncStorage.getItem('USER_AUTH_TOKEN');
         const USER_AUTH_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
 
-        if (USER_AUTH_TOKEN === undefined) {
+        if (USER_AUTH_TOKEN === null) {
             return;
         }
 

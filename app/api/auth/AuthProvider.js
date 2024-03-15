@@ -7,9 +7,10 @@ export function AuthProvider({ children }) {
     username: 'user',
     avatar_url: 'https://osu.ppy.sh/images/layout/avatar-guest.png',
   });
+  const [canChat, setCanChat] = useState(false);
 
   return (
-    <AuthContext.Provider value={{ loggedIn, setLoggedIn, user, setUser }}>
+    <AuthContext.Provider value={{ loggedIn, setLoggedIn, user, setUser, canChat, setCanChat }}>
       {children}
     </AuthContext.Provider>
   );

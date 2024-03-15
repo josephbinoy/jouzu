@@ -10,7 +10,7 @@ export default function Rankings() {
   const {rankings, isLoading, error} = getRankings();
 
   function handlePress(item) {
-    router.push(`/api/rank/${item.user.id}`);
+    router.push(`/api/user/${item.user.id}`);
   }
 
   return (
