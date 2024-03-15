@@ -21,8 +21,8 @@ export default function RankCard({item, handlePress}) {
             style={styles.logoImage}
             />
         <View style={styles.textContainer}>
-          <Text style={styles.title}>{item.global_rank}. {item.user.username}</Text>
-          <Text style={styles.preview}>{Math.floor(item.pp)} pp</Text>
+          <Text style={styles.title}>#{item.global_rank} {item.user.username}</Text>
+          <Text style={styles.preview}>{Math.floor(item.pp).toLocaleString()} pp</Text>
         </View>
       </ImageBackground>
     </TouchableOpacity>

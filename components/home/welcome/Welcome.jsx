@@ -13,6 +13,7 @@ export default function Welcome({tabs, activeTab, setActiveTab}){
   const router = useRouter();
 
   function handleSearchPress(){
+    if(query === '') return;
     router.push(`/api/search/${query}`)
     setQuery('');
   }

@@ -13,11 +13,15 @@ export default function News() {
     router.push(`/api/news/${item.slug}`);
   }
 
+  function goToNewsPage() {
+    router.push('/api/news');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
           <Text style={styles.headerTitle}>News</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={goToNewsPage}>
               <Text style={styles.headerBtn}>View All</Text>
           </TouchableOpacity>
       </View>

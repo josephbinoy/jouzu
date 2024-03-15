@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     width:40,
     height:40,
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     borderRadius: 25
   }
 });

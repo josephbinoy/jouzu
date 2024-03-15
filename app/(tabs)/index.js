@@ -1,7 +1,7 @@
-import {View, ScrollView, SafeAreaView } from 'react-native';
+import { Text, View, ScrollView, SafeAreaView } from 'react-native';
 import { useState } from 'react';
-import { COLORS, SIZES} from '../../constants';
-import { News, Welcome, Rankings } from '../../components';
+import { COLORS, SIZES, FONT} from '../../constants';
+import { News, Welcome, Rankings, Community } from '../../components';
 
 export default function Home() {
     const tabs= ['News', 'Rankings', 'Community', 'Events']
@@ -16,7 +16,7 @@ export default function Home() {
             case 'Community':
                 return <Community />
             case 'Events':
-                return <Events />
+                return <Text style={{marginTop: 40, fontFamily: FONT.bold, fontSize: SIZES.xLarge, color: COLORS.white}}> WIP </Text>
         }
     }
 

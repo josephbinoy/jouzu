@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
-    color: COLORS.gray2,
+    color: COLORS.lightWhite,
     marginTop: 2,
   },
   searchContainer: {
