@@ -83,7 +83,6 @@ export default function Home() {
     }
 
     useEffect(() => {
-        console.log(loggedIn)
         const fetchFriends = async () => {
             if(loggedIn){
                 let sortedFriends = await getFriends();

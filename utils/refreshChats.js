@@ -4,7 +4,6 @@ import { refreshToken } from "./getAndStoreToken";
 
 export default async function refreshChat(channel_id) {
     try {
-        console.log('refreshChat called')
         const jsonValue = await AsyncStorage.getItem('USER_AUTH_TOKEN');
         const USER_AUTH_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
 
@@ -37,7 +36,6 @@ export default async function refreshChat(channel_id) {
 
     } catch (e) {
         console.log(e);
-        console.log("error at refreshchat.js");
         return [];
     }
 }

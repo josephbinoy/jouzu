@@ -30,7 +30,6 @@ export default function getRankings() {
                 }
             }
             setLoading(true);
-            console.log('fetching ranks');
             const response = await axios.get('https://osu.ppy.sh/api/v2/rankings/osu/performance', config);
             setRankings(response.data.ranking);
             setLoading(false);

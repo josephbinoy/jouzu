@@ -4,7 +4,6 @@ import { client_id, client_secret } from  "@env"
 
 export default async function getGuestToken() {
     try {
-        console.log('getGuestToken called');
         const response = await axios.post('https://osu.ppy.sh/oauth/token', {
             client_id: client_id,
             client_secret: client_secret,
@@ -15,7 +14,6 @@ export default async function getGuestToken() {
         const jsonToken = JSON.stringify(response.data);
         await AsyncStorage.setItem('GUEST_TOKEN', jsonToken);
     } catch (error) {
-        console.log("error at getUser.js")
         console.log(error);
     }
 

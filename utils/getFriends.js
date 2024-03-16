@@ -4,7 +4,6 @@ import { refreshToken } from "./getAndStoreToken";
 
 export default async function getFriends() {
     try {
-        console.log('getFriends called')
         const jsonValue = await AsyncStorage.getItem('USER_AUTH_TOKEN');
         const USER_AUTH_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
 
@@ -45,7 +44,6 @@ export default async function getFriends() {
 
     } catch (e) {
         console.log(e);
-        console.log("error at getFriends.js");
         return [];
     }
 }

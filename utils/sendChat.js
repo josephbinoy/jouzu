@@ -4,7 +4,6 @@ import { refreshToken } from "./getAndStoreToken";
 
 export default async function sendChat(channel_id, message) {
     try {
-        console.log('sendChat called')
         const jsonValue = await AsyncStorage.getItem('USER_AUTH_TOKEN');
         const USER_AUTH_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
 
@@ -31,7 +30,6 @@ export default async function sendChat(channel_id, message) {
 
     } catch (e) {
         console.log(e);
-        console.log("error at sendChat.js");
         return false;
     }
 }

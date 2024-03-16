@@ -4,7 +4,6 @@ import { refreshToken } from "./getAndStoreToken";
 
 export default async function getAndStoreUser(setUser) {
     try {
-        console.log('getAndStoreUser called')
         const jsonValue = await AsyncStorage.getItem('USER_AUTH_TOKEN');
         const USER_AUTH_TOKEN = (jsonValue != null) ? JSON.parse(jsonValue) : null;
 
@@ -46,7 +45,6 @@ export default async function getAndStoreUser(setUser) {
             country_rank: response.data.statistics.country_rank,
         }
         setUser(user);
-        console.log("successfully stored user", user.pp, user.hit_accuracy);
         const jsonUser = JSON.stringify(user);
         await AsyncStorage.setItem('USER_PROFILE', jsonUser);
         return true;

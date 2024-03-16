@@ -4,7 +4,6 @@ import { client_id, client_secret } from  "@env"
 
 export async function getAndStoreToken(code) {
     try {
-        console.log('getAndStoreToken called');
         const response = await axios.post('https://osu.ppy.sh/oauth/token', {
             client_id: client_id,
             client_secret: client_secret,
@@ -16,7 +15,6 @@ export async function getAndStoreToken(code) {
         const jsonToken = JSON.stringify(response.data);
         await AsyncStorage.setItem('USER_AUTH_TOKEN', jsonToken);
     } catch (error) {
-        console.log("error at getAndStoreToken.js")
         console.log(error);
     }
 
@@ -24,7 +22,6 @@ export async function getAndStoreToken(code) {
 
 export async function refreshToken(){
     try {
-        console.log('refresh_token')
         const jsonValue = await AsyncStorage.getItem('USER_AUTH_TOKEN');
         const { refresh_token } = (jsonValue != null) ? JSON.parse(jsonValue) : null;
         const chatPermission = await AsyncStorage.getItem('CHAT_PERMSSION');
@@ -39,7 +36,6 @@ export async function refreshToken(){
         const jsonToken = JSON.stringify(response.data);
         await AsyncStorage.setItem('USER_AUTH_TOKEN', jsonToken);
     } catch (error) {
-        console.log("error at refreshtoken")
         console.log(error);
     }
 }

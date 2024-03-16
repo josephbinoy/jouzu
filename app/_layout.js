@@ -11,7 +11,7 @@ import getGuestToken from '../utils/getGuestToken';
 import { getAndStoreToken } from '../utils/getAndStoreToken';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as NavigationBar from 'expo-navigation-bar';
-import { Menu, MenuProvider } from 'react-native-popup-menu';
+import { MenuProvider } from 'react-native-popup-menu';
   
 SplashScreen.preventAutoHideAsync();
   
@@ -52,17 +52,14 @@ function AuthHandler(){
     useEffect(() => {
         const handleAuth = async () => {
             if (url && url!='exp://192.168.1.6:8081') {
-                console.log("AuthHandler if block called");
                 const { queryParams } = Linking.parse(url);
                 if (queryParams && queryParams.code) {
                     if (loggedIn){
-                        console.log('setting chat permission- '+queryParams.code)
                         await getAndStoreToken(queryParams.code);
                         await AsyncStorage.setItem('CHAT_PERMSSION', 'true');
                         setCanChat(true);
                     }
                     else {
-                        console.log(queryParams.code)
                         await getAndStoreToken(queryParams.code);
                         const success = await getAndStoreUser(setUser);
                         if (success){
@@ -72,7 +69,6 @@ function AuthHandler(){
                 }
             }
             else{
-                console.log("AuthHandler else block called")
                 const jsonValue = await AsyncStorage.getItem('USER_PROFILE');
                 if(jsonValue){
                     setUser(JSON.parse(jsonValue));
