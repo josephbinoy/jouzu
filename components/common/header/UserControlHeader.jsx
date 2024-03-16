@@ -1,11 +1,11 @@
-import React from 'react'
-import { Image, View,Text } from 'react-native'
+import { Image, View,Text} from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
 import { COLORS } from '../../../constants';
 import { AuthContext } from '../../../app/api/auth/AuthContext';
 import { useContext } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const RCTNetworking = require("react-native/Libraries/Network/RCTNetworking").default;
+import { useRouter } from 'expo-router';
 
 import {
   Menu,
@@ -17,7 +17,8 @@ import {
 import styles from './usercontrolheader.style'
 
 export default function UserControlHeader() {
-  const { user, setUser, setLoggedIn, setCanChat } = useContext(AuthContext);
+  const { user, setUser, loggedIn, setLoggedIn, setCanChat } = useContext(AuthContext);
+  const router = useRouter();
   handleLogout = async () => {
     try {
       await AsyncStorage.clear()
@@ -27,13 +28,14 @@ export default function UserControlHeader() {
         username: 'user',
         avatar_url: 'https://osu.ppy.sh/images/layout/avatar-guest.png',
       });
-      RCTNetworking.clearCookies((result) => {
-        console.log('cleared cookies', result); //true if successfully cleared
-      });
+      RCTNetworking.clearCookies(()=>{});
     } catch(e) {
       console.log(e)
     }
+  }
 
+  handleLogin = () => {
+    router.push('/api/login/login');
   }
 
   return (
@@ -53,9 +55,13 @@ export default function UserControlHeader() {
         <Image source={{uri: user.avatar_url}} resizeMode='cover' style={styles.btnImg}   />
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menuOptions}>
+        {loggedIn?
         <MenuOption onSelect={() => handleLogout()} style={styles.option}>
           <Text style={styles.title}>logout</Text>
-        </MenuOption>
+        </MenuOption>:
+        <MenuOption onSelect={() => handleLogin()} style={styles.option}>
+          {<Text style={styles.title}>login</Text>}
+        </MenuOption>}
       </MenuOptions>
     </Menu>
     </View>

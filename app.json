@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "jouzu_canary",
-    "slug": "jouzu_canary",
+    "name": "jouzu",
+    "slug": "jouzu",
     "version": "1.0.0",
     "backgroundColor": "#24222a",
     "orientation": "portrait",
@@ -18,6 +18,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.JBM.jouzu",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
