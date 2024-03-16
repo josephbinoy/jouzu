@@ -33,7 +33,7 @@ export async function refreshToken(){
             client_secret: client_secret,
             grant_type: 'refresh_token',
             refresh_token: refresh_token,
-            scope: (chatPermission=='true')?'friends.read chat.read chat.write chat.write_manage':'friends.read'
+            scope: (chatPermission=='true')?'friends.read public chat.read chat.write chat.write_manage':'friends.read public'
         });
         response.data.expires_at = Date.now() + response.data.expires_in*1000;
         const jsonToken = JSON.stringify(response.data);

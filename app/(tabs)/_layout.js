@@ -2,10 +2,7 @@ import { Tabs } from 'expo-router';
 import { Image} from 'react-native';
 import { COLORS, FONT, icons} from '../../constants';
 import { StyleSheet } from "react-native";
-import { ScreenHeaderBtn } from '../../components';
-import { useContext } from 'react';
-import { AuthContext } from '../api/auth/AuthContext';
-import { useRouter } from 'expo-router';
+import { UserControlHeader } from '../../components';
 
 const tabStyle = StyleSheet.create({
     tabIcon: (color) => ({
@@ -16,8 +13,6 @@ const tabStyle = StyleSheet.create({
 })
 
 export default function TabLayout() {
-  const router = useRouter();
-  const { user } = useContext(AuthContext);
   return (
     <Tabs screenOptions={{ 
         tabBarActiveTintColor: COLORS.white,
@@ -36,9 +31,7 @@ export default function TabLayout() {
           tabBarIcon: ({color}) => (<Image source={icons.home} style={tabStyle.tabIcon(color)}/>),
           headerShadowVisible: false,
           headerStyle: {backgroundColor: COLORS.bg},
-          headerRight: () => (
-              <ScreenHeaderBtn iconUrl={{uri: user.avatar_url}} />
-          ),
+          headerRight: () => ( <UserControlHeader />),
           headerTitle: "jouzu",
           headerTintColor: COLORS.white,
           headerTitleAlign: 'left'
@@ -55,7 +48,7 @@ export default function TabLayout() {
           headerTitle: "beatmaps listing",
           headerTintColor: COLORS.white,
           headerTitleAlign: 'left',
-          unmountOnBlur: true
+
         }}
       />
       <Tabs.Screen

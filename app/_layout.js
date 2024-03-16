@@ -11,6 +11,7 @@ import getGuestToken from '../utils/getGuestToken';
 import { getAndStoreToken } from '../utils/getAndStoreToken';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as NavigationBar from 'expo-navigation-bar';
+import { Menu, MenuProvider } from 'react-native-popup-menu';
   
 SplashScreen.preventAutoHideAsync();
   
@@ -35,11 +36,13 @@ export default function Layout() {
     return (
         <AuthProvider>
             <AuthHandler />
-            <SafeAreaProvider>
+            <MenuProvider>
+                <SafeAreaProvider>
                     <Stack>
                         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                     </Stack>
-            </SafeAreaProvider>
+                </SafeAreaProvider>
+            </MenuProvider>
         </AuthProvider>
     )}
 
