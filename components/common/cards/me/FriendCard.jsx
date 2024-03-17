@@ -4,6 +4,7 @@ import moment from 'moment'
 import { icons } from '../../../../constants'
 
 import styles from './friendcard.style'
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function FriendCard({friend, goToChat, goToFriendsPage}) {
 
@@ -20,6 +21,10 @@ export default function FriendCard({friend, goToChat, goToFriendsPage}) {
         />
         <View style={styles.topContainer}>
           <Image source={{uri: friend.avatar_url}} style={styles.logoImage} />
+          {friend.is_supporter &&
+          <View style={styles.heartContainer}>
+            <FontAwesome name='heart' color='white' size={13} />
+          </View>}
           <View style={styles.statusRing(friend.is_online)}/>
           <Text style={styles.preview}>{friend.is_online?'Online': 'Offline'}</Text>
         </View>

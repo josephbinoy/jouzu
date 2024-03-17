@@ -7,6 +7,12 @@ import styles from './profilecard.style'
 
 export default function ProfileCard({user, handlePress}) {
 
+  const heartIcons = {
+    1: icons.heart1,
+    2: icons.heart2,
+    3: icons.heart3,
+  };
+
   function getDateString(){
     let date = new Date(user.join_date);
     let month = date.toLocaleString('default', { month: 'long' });
@@ -28,7 +34,11 @@ export default function ProfileCard({user, handlePress}) {
             <View style={styles.textContainer}>
               <View style={{flexDirection: 'row', alignItems: 'center', gap: 5}}>
                 <Text style={styles.username}>{user.username}</Text>
-                <Image source={icons.heart} style={styles.supporterIcon} resizeMode='contain'/>
+                {user.is_supporter &&
+                <Image 
+                  source={heartIcons[user.support_level]}
+                  style={styles.supporterIcon(user.support_level)} 
+                  resizeMode='contain'/>}
               </View>
               <View style={styles.countryContainer}>
                   <CountryFlag isoCode={user.country.code} size={18} style={{alignSelf: 'flex-end'}}/>

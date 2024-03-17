@@ -51,7 +51,7 @@ function AuthHandler(){
     const url = Linking.useURL();
     useEffect(() => {
         const handleAuth = async () => {
-            if (url && url!='jouzu://') {
+            if (url && url!='exp://192.1.6.8081') {
                 const { queryParams } = Linking.parse(url);
                 if (queryParams && queryParams.code) {
                     if (loggedIn){

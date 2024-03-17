@@ -33,6 +33,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  heartContainer: {
+    backgroundColor: '#ff66ab',
+    borderRadius: 25,
+    width: 25,
+    height: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   statusRing: (isOnline) => ({
     borderWidth: 4,
     borderRadius: 50,

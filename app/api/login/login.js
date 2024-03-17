@@ -16,7 +16,7 @@ export default function Login(){
                     headerTitleAlign: 'center',
                     }} />
             <WebView 
-                source={{ uri: `https://osu.ppy.sh/oauth/authorize?client_id=30906&redirect_uri=jouzu://(tabs)/me&response_type=code&scope=friends.read public` }}
+                source={{ uri: `https://osu.ppy.sh/oauth/authorize?client_id=30906&redirect_uri=exp://192.168.1.6:8081/--/(tabs)/me&response_type=code&scope=friends.read public` }}
                 style={{ backgroundColor: COLORS.bg }}    
                 />      
         </SafeAreaView>

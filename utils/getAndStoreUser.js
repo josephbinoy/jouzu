@@ -28,6 +28,7 @@ export default async function getAndStoreUser(setUser) {
             avatar_url: response.data.avatar_url,
             id: response.data.id,
             is_supporter: response.data.is_supporter,
+            support_level: response.data.support_level,
             username: response.data.username,
             interests: response.data.interests,
             join_date: response.data.join_date,
