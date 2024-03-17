@@ -8,7 +8,7 @@ export async function getAndStoreToken(code) {
             client_secret: process.env.client_secret,
             code: code,
             grant_type: 'authorization_code',
-            redirect_uri: 'exp://192.168.1.6:8081/--/(tabs)/me'
+            redirect_uri: 'jouzu://(tabs)/me'
         });
         response.data.expires_at = Date.now() + response.data.expires_in*1000;
         const jsonToken = JSON.stringify(response.data);
