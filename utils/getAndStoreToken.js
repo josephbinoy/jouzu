@@ -1,15 +1,14 @@
 import axios from "axios";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { client_id, client_secret } from  "@env"
 
 export async function getAndStoreToken(code) {
     try {
         const response = await axios.post('https://osu.ppy.sh/oauth/token', {
-            client_id: client_id,
-            client_secret: client_secret,
+            client_id: process.env.client_id,
+            client_secret: process.env.client_secret,
             code: code,
             grant_type: 'authorization_code',
-            redirect_uri: 'exp://192.168.1.6:8081/--/(tabs)/me'
+            redirect_uri: 'jouzu://(tabs)/me'
         });
         response.data.expires_at = Date.now() + response.data.expires_in*1000;
         const jsonToken = JSON.stringify(response.data);
@@ -26,8 +25,8 @@ export async function refreshToken(){
         const { refresh_token } = (jsonValue != null) ? JSON.parse(jsonValue) : null;
         const chatPermission = await AsyncStorage.getItem('CHAT_PERMSSION');
         const response = await axios.post('https://osu.ppy.sh/oauth/token', {
-            client_id: client_id,
-            client_secret: client_secret,
+            client_id: process.env.client_id,
+            client_secret: process.env.client_secret,
             grant_type: 'refresh_token',
             refresh_token: refresh_token,
             scope: (chatPermission=='true')?'friends.read public chat.read chat.write chat.write_manage':'friends.read public'

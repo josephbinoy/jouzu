@@ -37,6 +37,20 @@
         }
       ]
     ],
-    "scheme": "jouzu"
+    "scheme": "jouzu",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "eac5aefb-14af-4423-a033-27bfed378638"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/eac5aefb-14af-4423-a033-27bfed378638"
+    }
   }
 }

@@ -28,7 +28,7 @@ export default function UserControlHeader() {
         username: 'user',
         avatar_url: 'https://osu.ppy.sh/images/layout/avatar-guest.png',
       });
-      RCTNetworking.clearCookies(()=>{});
+      RCTNetworking.clearCookies((res)=>{console.log(res)});
     } catch(e) {
       console.log(e)
     }

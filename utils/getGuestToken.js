@@ -1,12 +1,11 @@
 import axios from "axios";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { client_id, client_secret } from  "@env"
 
 export default async function getGuestToken() {
     try {
         const response = await axios.post('https://osu.ppy.sh/oauth/token', {
-            client_id: client_id,
-            client_secret: client_secret,
+            client_id: process.env.client_id,
+            client_secret: process.env.client_secret,
             grant_type: 'client_credentials',
             scope: 'public'
         });
