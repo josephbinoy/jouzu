@@ -1,5 +1,5 @@
-# jouzu
 <img src="https://github.com/josephbinoy/jouzu/blob/main/assets/icon.png" height="100px" width="100px">
+<h1>jouzu</h1>
 ## Unofficial mobile app companion for the game osu built using React Native
 
 # Screenshots
