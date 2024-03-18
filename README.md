@@ -10,8 +10,8 @@
 
 
 ### Authentication from osu!
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/login.jpeg?raw=true)
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/login.jpeg)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg)
 
 
 ### Profile
