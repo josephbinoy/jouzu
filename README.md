@@ -4,24 +4,20 @@
 # Screenshots
 
 ### Home
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg" width="30%" >
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg" width="30%" style="padding-left=5%; padding-right=5%;">
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg" width="30%" >
-
-<br>
+<a><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg" width="30%" ></a>
+<a><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg" width="30%" style="padding-left=5%; padding-right=5%;"></a>
+<a><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg" width="30%" ></a>
 
 ### Authentication from osu!
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" width="30%" ></a>
-
-<br>
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" width="30%" >
 
 ### Profile
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" width="30%" ></a>
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" width="30%" >
 
 <br>
 
 ### Friends
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg" align="left" width="30%" ></a>
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg" align="left" width="30%" >
 
 <br>
 
