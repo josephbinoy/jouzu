@@ -1,3 +1,4 @@
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/icon.png" height="100px" width="100px">
 # jouzu app
 ## Unofficial mobile app companion for the game osu built using React Native
 
