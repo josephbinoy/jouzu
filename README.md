@@ -11,19 +11,16 @@
 
 
 ### Authentication from osu!
-<div width="100%">
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" ></a>
-</div>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg?raw=true)
+
 
 ### Profile
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg?raw=true)
 
-<br>
 
 ### Friends
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg" align="left" width="30%" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg?raw=true)
 
-<br>
 
 ### Chat
 <a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/chat.jpeg" align="left" width="30%" ></a>
