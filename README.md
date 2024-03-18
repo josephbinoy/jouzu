@@ -12,11 +12,11 @@
 
 ### Authentication from osu!
 <div width="100%">
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" width="30%" ></a>
+<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" ></a>
 </div>
 
 ### Profile
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" width="30%" ></a>
+<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" ></a>
 
 <br>
 
