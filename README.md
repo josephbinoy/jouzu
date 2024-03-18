@@ -11,10 +11,9 @@
 
 
 ### Authentication from osu!
-<div width=100%>
+<div width="100%">
 <a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" width="30%" ></a>
 </div>
-<br>
 
 ### Profile
 <a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" width="30%" ></a>
