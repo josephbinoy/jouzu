@@ -15,25 +15,25 @@
 
 
 ### Profile
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg)
 
 
 ### Friends
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg)
 
 
 ### Chat
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/chat.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/chat.jpeg)
 
 
 ### Beatmaps
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg?raw=true)
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg)
 
 
 ### Search
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/search.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/search.jpeg)
 
 
 ### View Players, News pages
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg)
