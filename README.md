@@ -3,11 +3,9 @@
 
 # Screenshots
 ### Home
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg" width="30%" ></a>
-
-<br>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg?raw=true)
 
 
 ### Authentication from osu!
@@ -28,8 +26,8 @@
 
 
 ### Beatmaps
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg" align="left" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg" align="left" width="30%" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg?raw=true)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg?raw=true)
 
 
 ### Search
