@@ -4,9 +4,9 @@
 # Screenshots
 
 ### Home
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg" width="30%" style="padding-left=5%; padding-right=5%;"></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg" width="30%" ></a>
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg" width="30%" >
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg" width="30%" style="padding-left=5%; padding-right=5%;">
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg" width="30%" >
 
 <br>
 
