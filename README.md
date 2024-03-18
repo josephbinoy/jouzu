@@ -1,4 +1,4 @@
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/icon.png" height="100px" width="100px">
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/icon.png" height="200px" width="200px">
 <h1>jouzu</h1>
 
 
