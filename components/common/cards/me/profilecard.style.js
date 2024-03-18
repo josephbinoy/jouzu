@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
     color: COLORS.gray,
     marginTop: 3,
   },
-  supporterIcon: {
-    width: 50,
+  supporterIcon:(level) => ({
+    width: level*10+40,
     height: 30
-  },
+  }),
   date: {
     alignSelf: 'flex-end',
     marginHorizontal: SIZES.small,
