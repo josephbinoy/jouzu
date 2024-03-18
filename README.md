@@ -3,9 +3,16 @@
 
 # Screenshots
 ### Home
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg?" width="30%" ></a>
-<a href="url" style="margin-right: 20px; margin-left:20px"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg?" width="30%"  style="margin-right: 20px; margin-left:20px"></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg?" width="30%" ></a>
+<a href="url" style="margin-right: 20px;">
+    <img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg?" width="30%">
+</a>
+<a href="url" style="margin-right: 20px; margin-left:20px;">
+    <img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg?" width="30%">
+</a>
+<a href="url" style="margin-left:20px;">
+    <img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg?" width="30%">
+</a>
+
 
 
 ### Authentication from osu!
