@@ -9,10 +9,10 @@
 <a><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg" width="30%" ></a>
 
 ### Authentication from osu!
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" width="30%" >
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg?raw=true" align="left" width="30%" >
 
 ### Profile
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" width="30%" >
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg?raw=true" align="left" width="30%" >
 
 <br>
 
