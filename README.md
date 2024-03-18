@@ -32,7 +32,7 @@
 
 ### Beatmaps
 <a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg" align="left" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps.jpeg" align="left" width="30%" ></a>
+<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg" align="left" width="30%" ></a>
 
 <br>
 
