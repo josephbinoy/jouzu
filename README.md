@@ -11,37 +11,29 @@
 
 
 ### Authentication from osu!
-<div width="100%">
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg" align="left" width="30%" ></a>
-</div>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg?raw=true)
+
 
 ### Profile
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg" align="left" width="30%" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg?raw=true)
 
-<br>
 
 ### Friends
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg" align="left" width="30%" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg?raw=true)
 
-<br>
 
 ### Chat
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/chat.jpeg" align="left" width="30%" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/chat.jpeg?raw=true)
 
-<br>
 
 ### Beatmaps
 <a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg" align="left" width="30%" ></a>
 <a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg" align="left" width="30%" ></a>
 
-<br>
 
 ### Search
-<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/search.jpeg" align="left" width="30%" ></a>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/search.jpeg?raw=true)
 
-<br>
 
 ### View Players, News pages
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg" align="left" width="30%" ></a>
-
-<br>
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg?raw=true)
