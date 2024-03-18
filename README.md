@@ -37,3 +37,4 @@
 
 ### View Players, News pages
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg)
+![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/news.jpeg)
