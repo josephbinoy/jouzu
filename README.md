@@ -3,4 +3,4 @@
 
 # Screenshots
 ### Home
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg?raw=true)
+<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg" align="left" width="48" ></a>
