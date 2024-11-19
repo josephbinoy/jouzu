@@ -1,39 +1,42 @@
-# jouzu app
+<img src="https://github.com/josephbinoy/jouzu/blob/main/assets/icon.png" height="200px" width="200px">
+<h1>jouzu</h1>
+
+
 ## Unofficial mobile app companion for the game osu built using React Native
 
 # Screenshots
-### Home
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg?" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg?" width="30%" ></a>
-<a href="url"><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg?" width="30%" ></a>
+## Home
+<a ><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/home.jpeg?" width="30%" ></a>
+<a ><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/rankings.jpeg?" width="30%"></a>
+<a ><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/community.jpeg?" width="30%" ></a>
 
 
-
-### Authentication from osu!
+## Authentication from osu!
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/login.jpeg)
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/auth.jpeg)
 
 
-### Profile
+## Profile
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/profile.jpeg)
 
 
-### Friends
+## Friends
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/friends.jpeg)
 
 
-### Chat
+## Chat
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/chat.jpeg)
 
 
-### Beatmaps
+## Beatmaps
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmaps_listing.jpeg)
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/beatmap.jpeg)
 
 
-### Search
+## Search
 ![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/search.jpeg)
 
 
-### View Players, News pages
-![alt text](https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg)
+## View Players, News pages
+<a ><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/players.jpeg" align="left" width="40%" ></a>
+<a ><img src="https://github.com/josephbinoy/jouzu/blob/main/assets/Screenshots/news.jpeg" align="left" width="40%" ></a>
